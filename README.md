@@ -2,9 +2,6 @@
 Cryptographically verifiable activation fingerprints for ML explainability in network intrusion detection
 
 
-
-# ExplainGuard
-
 ExplainGuard is a framework that cryptographically binds per-feature activation 
 fingerprints to their ML inference event at the moment of generation, providing 
 tamper-evidence and non-repudiation for explainable AI pipelines in 
