@@ -1,0 +1,33 @@
+# ExplainGuard Clean - Requirements
+
+torch
+torchvision
+torchaudio
+
+# Data & ML
+numpy
+pandas
+scikit-learn
+captum>=0.6.0
+
+# Cryptography
+ecdsa
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# Utilities
+tqdm
+pyyaml
+
+# Quality & Testing
+pytest
+black
+flake8
+mypy
+
+# Optional: Jupyter support
+jupyter
+ipython
