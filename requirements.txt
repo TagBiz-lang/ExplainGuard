@@ -1,4 +1,4 @@
-# ExplainGuard Clean - Requirements
+# ExplainGuard - Requirements
 
 torch
 torchvision
