@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ExplainGuard Clean - Main Entry Point
+ExplainGuard - Main Entry Point
 
 Quick setup and execution for ExplainGuard evaluation.
 Provides interactive menu for common tasks.
@@ -20,9 +20,9 @@ logger = setup_logging(__name__)
 
 
 def print_banner():
-    print("\n" + "=" * 80)
+    print("\n" + "=" * 20)
     print("  EXPLAINGUARD CLEAN - OPTIMIZED WORKFLOW")
-    print("=" * 80 + "\n")
+    
 
 
 def print_menu():
