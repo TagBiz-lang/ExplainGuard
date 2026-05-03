@@ -28,7 +28,7 @@ def test_certificate_persistence():
         test_datasets = list(LegacyConfig.LEGACY_DATASET_DIR.glob("*.csv"))
     
     if not test_datasets:
-        print("❌ ERROR: No datasets found!")
+        print(" ERROR: No datasets found!")
         return False
     
     test_csv = str(test_datasets[0])
@@ -43,7 +43,7 @@ def test_certificate_persistence():
         result = evaluator.run(test_csv, dataset_name=dataset_name)
         
         if result is None:
-            print("❌ ERROR: Evaluation returned None")
+            print("ERROR: Evaluation returned None")
             return False
         
         # Check certificate directory
@@ -81,7 +81,7 @@ def test_certificate_persistence():
         with open(sample_cert_path, 'r') as f:
             cert_data = json.load(f)
         
-        print(f"\n✓ Sample certificate loaded: {sample_cert_path.name}")
+        print(f"\n Sample certificate loaded: {sample_cert_path.name}")
         print(f"  - Has input_tensor: {'input_tensor' in cert_data}")
         print(f"  - Has feature_importances: {'feature_importances' in cert_data}")
         print(f"  - Has hash_chain: {'hash_chain' in cert_data}")
@@ -96,13 +96,12 @@ def test_certificate_persistence():
         print(f"  - RQ2 Robustness: {rq_metrics['rq2'].get('avg_confidence', 'N/A')}")
         print(f"  - RQ3 Overhead: {rq_metrics['rq3'].get('throughput_samples_per_sec', 'N/A')} samples/sec")
         
-        print("\n" + "="*70)
-        print("✅ CERTIFICATE PERSISTENCE TEST PASSED!")
-        print("="*70)
+
+        print(" CERTIFICATE PERSISTENCE TEST PASSED!")
         return True
         
     except Exception as e:
-        print(f"\n❌ ERROR: {type(e).__name__}: {e}")
+        print(f"\n ERROR: {type(e).__name__}: {e}")
         import traceback
         traceback.print_exc()
         return False
@@ -122,7 +121,7 @@ def test_metrics_vary_across_datasets():
         results = evaluator.evaluate_all()
         
         if not results:
-            print("❌ ERROR: No results from multi-dataset evaluation")
+            print(" ERROR: No results from multi-dataset evaluation")
             return False
         
         print(f"\nEvaluated {len(results)} datasets\n")
@@ -173,7 +172,7 @@ def test_metrics_vary_across_datasets():
             return True
             
     except Exception as e:
-        print(f"❌ ERROR: {type(e).__name__}: {e}")
+        print(f" ERROR: {type(e).__name__}: {e}")
         import traceback
         traceback.print_exc()
         return False
@@ -193,8 +192,8 @@ if __name__ == "__main__":
     print("\n" + "="*70)
     print("TEST SUMMARY")
     print("="*70)
-    print(f"Certificate Persistence: {'✅ PASS' if cert_test else '❌ FAIL'}")
-    print(f"Dataset-Specific Metrics: {'✅ PASS' if metrics_test else '❌ FAIL'}")
+    print(f"Certificate Persistence: {'PASS' if cert_test else ' FAIL'}")
+    print(f"Dataset-Specific Metrics: {' PASS' if metrics_test else ' FAIL'}")
     print("="*70 + "\n")
     
     sys.exit(0 if (cert_test and metrics_test) else 1)
