@@ -62,7 +62,7 @@ def test_metrics_aggregator():
     print(f"  Best accuracy: {report['best_models']['accuracy'][0]}")
     
     print("\n" + "="*70)
-    print("✅ ALL TESTS PASSED - MetricsAggregator is working correctly!")
+    print(" ALL TESTS PASSED - MetricsAggregator is working correctly!")
     print("="*70)
     
     return True
@@ -89,7 +89,7 @@ def test_comprehensive_evaluation():
     print("✓ export_comparison_reports method available")
     
     print("\n" + "="*70)
-    print("✅ EvaluationPipeline integration test PASSED!")
+    print(" EvaluationPipeline integration test PASSED!")
     print("="*70)
     
     return True
@@ -136,9 +136,8 @@ if __name__ == '__main__':
         all_pass = test_comprehensive_evaluation() and all_pass
         
         if all_pass:
-            print("\n" + "="*70)
-            print("🎉 ALL VALIDATION TESTS PASSED!")
-            print("="*70)
+            print(" ALL VALIDATION TESTS PASSED!")
+            print("-"*20)
             print("\nYou can now:")
             print("  1. Run evaluation pipeline (metrics captured automatically)")
             print("  2. Export comparison reports")
