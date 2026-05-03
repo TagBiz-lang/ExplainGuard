@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Quick validation test for MetricsAggregator
-Run this to verify the metrics system is working correctly
-"""
+
 
 import numpy as np
 from pathlib import Path
